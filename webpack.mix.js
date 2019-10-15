@@ -15,4 +15,5 @@ mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
 
 mix.js('resources/js/app-admin.js', 'public/js')
-  .sass('resources/sass/app-admin.scss', 'public/css');
+  .sass('resources/sass/app-admin.scss', 'public/css')
+  .copy('node_modules/admin-lte/dist/img/', 'public/dist/img');
