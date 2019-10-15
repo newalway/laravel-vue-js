@@ -39,4 +39,77 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the value of The attributes that are mass assignable.
+     *
+     * @return array
+     */
+    public function getFillable()
+    {
+        return $this->fillable;
+    }
+
+    /**
+     * Set the value of The attributes that are mass assignable.
+     *
+     * @param array fillable
+     *
+     * @return self
+     */
+    public function setFillable(array $fillable)
+    {
+        $this->fillable = $fillable;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of The attributes that should be hidden for arrays.
+     *
+     * @return array
+     */
+    public function getHidden()
+    {
+        return $this->hidden;
+    }
+
+    /**
+     * Set the value of The attributes that should be hidden for arrays.
+     *
+     * @param array hidden
+     *
+     * @return self
+     */
+    public function setHidden(array $hidden)
+    {
+        $this->hidden = $hidden;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of The attributes that should be cast to native types.
+     *
+     * @return array
+     */
+    public function getCasts()
+    {
+        return $this->casts;
+    }
+
+    /**
+     * Set the value of The attributes that should be cast to native types.
+     *
+     * @param array casts
+     *
+     * @return self
+     */
+    public function setCasts(array $casts)
+    {
+        $this->casts = $casts;
+
+        return $this;
+    }
+
 }
