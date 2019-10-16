@@ -5,6 +5,11 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+// @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.min.css';
+@import '~icheck-bootstrap/icheck-bootstrap';
+/// Admin Lte Include Bootstrap 4.3.1
 @import '~admin-lte/dist/css/adminlte.css';
+
+
+// @import '~admin-lte/plugins/iCheck/all.css';

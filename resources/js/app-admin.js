@@ -4,7 +4,12 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require('./bootstrap-admin');
+
+
+
+// <script src="{{ asset('vendor/adminlte/plugins/iCheck/icheck.min.js') }}"></script>
+
 
 window.Vue = require('vue');
 window.axios = require('axios');
