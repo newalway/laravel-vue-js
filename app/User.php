@@ -12,7 +12,7 @@ class User extends Authenticatable implements MustVerifyEmail
     use Notifiable;
     use HasRoles;
 
-
+    protected $guard_name = 'admin';
     /**
      * The attributes that are mass assignable.
      *

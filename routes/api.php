@@ -13,11 +13,11 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::namespace('Api')->prefix('v1')->name('api.')->group( function(){
-    // Route::resource('/users','UserController',['except'=>['show','create','store']]);
-    Route::resource('/users', 'ApiUserController',['except'=>['show','create','store']]);
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+// Route::namespace('Api')->prefix('v1')->name('api.')->group( function(){
+//     // Route::resource('/users','UserController',['except'=>['show','create','store']]);
+//     Route::resource('/users', 'ApiUserController',['except'=>['show','create','store']]);
+// });
 // Route::resource('/users', 'Api\ApiUserController');

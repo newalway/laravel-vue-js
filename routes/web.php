@@ -11,21 +11,31 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Auth::routes(['verify' => true]);
+// Auth::routes(['verify' => true]);
 // Route::resource('/users', 'UserController');
 // Auth::routes();
 //
-Route::get('/home', 'HomeController@index')->name('home');
+// Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'HomeController@index');
+
 
 //Route for admin
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group( function(){
     // Route::get('/', 'HomeController@index')->name('home');
     // Route::get('/dashboard', 'HomeController@index')->name('dashboard');
-    Route::resource('/users','UserController',['except'=>['show','create','store']]);
+    // Route::resource('/users','UserController',['except'=>['show','create','store']]);
+    Auth::routes();
+    Route::group(['middleware' => ['auth:admin']], function() {
+        Route::get('/dashboard', 'AdminController@index')->name('dashboard');
+        Route::resource('roles','RoleController');
+        Route::resource('users','UserController');
+        // Route::resource('products','ProductController');
+    });
 });
 // Route::group(['prefix' => 'admin','namespace'=>'Admin','name'=>'admin.'], function(){
 //     // Route::group(['middleware' => ['admin']], function(){

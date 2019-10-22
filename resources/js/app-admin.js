@@ -6,6 +6,7 @@
 
 require('./bootstrap-admin');
 
+import Swal from 'sweetalert2/src/sweetalert2.js'
 
 
 // <script src="{{ asset('vendor/adminlte/plugins/iCheck/icheck.min.js') }}"></script>
